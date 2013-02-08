@@ -8,7 +8,7 @@ from core.api import PostAccountResource, GeoPostResource
 # admin.autodiscover()
 
 
-api_resource = Api(api_name='myApi')
+api_resource = Api(api_name='v1')
 api_resource.register(PostAccountResource())
 api_resource.register(GeoPostResource())
 
