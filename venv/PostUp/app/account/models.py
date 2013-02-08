@@ -71,21 +71,21 @@ class PostAccount(UserProfile):
         
         return store
     
-    def authenticate(self, slug, api_token):
-        
-        try:
-            ApiKey.objects.get(user=self.user, key=api_token)
-            print u'Post user/api_token match'
-            return True
-        except:
-            return False
-        
-        try:
-            PostAccount.objects.get(user=self.user, slug=slug)
-            print u'Post user/slug match'
-            return True
-        except:
-            return False    
+#    def authenticate(self, slug, api_token):
+#        
+#        try:
+#            ApiKey.objects.get(user=self.user, key=api_token)
+#            print u'Post user/api_token match'
+#            return True
+#        except:
+#            return False
+#        
+#        try:
+#            PostAccount.objects.get(user=self.user, slug=slug)
+#            print u'Post user/slug match'
+#            return True
+#        except:
+#            return False    
         
         
 

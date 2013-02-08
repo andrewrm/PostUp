@@ -10,9 +10,11 @@ class GeoPost(models.Model):
     slug = models.SlugField(default=generate_slug)
     text = models.CharField(max_length = 200)
     created = models.DateTimeField('Date published')
+
     creator = models.ForeignKey(User)
+    
     latitude = models.FloatField(default=0.0)
-    longitude = models.FloatField(default=0.0)
+    longitude = models.Field(default=0.0)
 
     def to_dict(self):
         store = {}
