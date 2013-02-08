@@ -27,8 +27,8 @@ class FriendInvite(models.Model):
 
 class PostAccount(UserProfile):
 
-    friends = models.ManyToManyField(User, blank=True, null=True, related_name='bet_account_friends')
-    friend_invites = models.ManyToManyField(FriendInvite, blank=True, null=True)
+    friends = models.ManyToManyField(User, blank=True, null=True, related_name='friends')
+    friend_invites = models.ManyToManyField(FriendInvite, blank=True, null=True, related_name='friend_invites')
     
     profile_image_url = models.CharField(max_length=2048,blank=True, null=True)   
     

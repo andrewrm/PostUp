@@ -29,5 +29,5 @@ class GeoPost(models.Model):
 
 
     def __unicode__(self):
-        return u"$s $s" % (self.text, self.user.username)
+        return u"$s $n" % (self.text, self.creator)
 
