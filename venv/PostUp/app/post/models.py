@@ -14,7 +14,7 @@ class GeoPost(models.Model):
     creator = models.ForeignKey(User)
     
     latitude = models.FloatField(default=0.0)
-    longitude = models.Field(default=0.0)
+    longitude = models.FloatField(default=0.0)
 
     def to_dict(self):
         store = {}
@@ -29,5 +29,5 @@ class GeoPost(models.Model):
 
 
     def __unicode__(self):
-        return u"$s $n" % (self.text, self.creator)
+        return u"$s" % (self.text)
 

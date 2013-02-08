@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from django.shortcuts import redirect
 from django.contrib.auth import login, authenticate
 from account.models import PostAccount
 

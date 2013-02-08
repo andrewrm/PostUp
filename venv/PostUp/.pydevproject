@@ -9,7 +9,7 @@
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">PostUpInterpreter</pydev_property>
 <pydev_variables_property name="org.python.pydev.PROJECT_VARIABLE_SUBSTITUTION">
 <key>DJANGO_MANAGE_LOCATION</key>
-<value>manage.py</value>
+<value>app/manage.py</value>
 <key>DJANGO_SETTINGS_MODULE</key>
 <value>settings</value>
 </pydev_variables_property>
