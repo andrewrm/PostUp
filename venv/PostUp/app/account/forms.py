@@ -59,7 +59,7 @@ class PostAccountCreateForm(forms.ModelForm):
         - Extracts form data
         - Searches User database for user with same email
           - Found email, reuse the User object for new Role
-          - Did not find email, create teh User object for new Role 
+          - Did not find email, create the User object for new Role 
         """
         email = self.cleaned_data.get('email')
         username = self.cleaned_data.get('username')
@@ -73,7 +73,7 @@ class PostAccountCreateForm(forms.ModelForm):
         # Create each role
         user_account = PostAccount.objects.create(
                user=user,
-               slug=generate_unique_slug('account','BetAccount')
+               slug=generate_unique_slug('account','PostAccount')
         )
         
         user_account.save()

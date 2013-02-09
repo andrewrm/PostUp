@@ -1,11 +1,3 @@
-from django.template import loader
-from django.template.context import RequestContext
-from django.http import HttpResponse
-from django.http import HttpResponseNotFound
-from django.shortcuts import redirect
-from account.utils import get_post_account
-
-
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
@@ -24,6 +16,7 @@ from account.forms import UserAccountCreateForm, ProfileImageUploadForm
 from account.utils import auto_login_user, get_post_account
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
+import account.views
 
 from account.forms import PostAccountCreateForm
 #from bet.forms import BetAccountCreateForm, BetUserLoginForm, BetAccountForm
@@ -42,8 +35,6 @@ def account(request, slug):
 
 
 def account_create(request):
-    from core.views import view_error
-
     
     print 'Account create request'
     
@@ -75,8 +66,7 @@ def account_create(request):
 
 
 @csrf_exempt
-def mobileCreateAccount(request):
-    from core.views import view_error
+def mobile_create_account(request):
     print 'Account create request'
     
     print request.POST
@@ -113,5 +103,3 @@ def mobileCreateAccount(request):
 #    c = RequestContext(request, context)
 #    return HttpResponse(t.render(c))
     return HttpResponse()
-
-

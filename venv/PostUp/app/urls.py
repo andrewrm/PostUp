@@ -1,6 +1,5 @@
 from django.conf.urls import patterns, include, url
 import core.urls
-import account.urls
 
 
 # Uncomment the next two lines to enable the admin:
@@ -11,9 +10,6 @@ urlpatterns = patterns('',
     
     #Additional Apps
     url(r'^core/', include(core.urls)),
-   # url(r'^account/', include(account.urls)),
-
-
 
 
    #url(r'^$', 'app.core.views.home', name='home'),
@@ -25,7 +21,5 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-        # The normal jazz here...
         
-    #(r'^blog/', include('app.urls')),
 )

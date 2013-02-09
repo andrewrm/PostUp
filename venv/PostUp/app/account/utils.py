@@ -11,7 +11,7 @@ def create_user(email, username, password=None, is_staff=None, is_active=None):
         user = User.objects.create_user(username, email, password)
     except IntegrityError, err:
         if err.message == 'column username is not unique':
-            raise IntegrityError('user email is not unique')
+            raise IntegrityError('Your user account info is not unique')
         raise
 
     if is_active is not None or is_staff is not None:
