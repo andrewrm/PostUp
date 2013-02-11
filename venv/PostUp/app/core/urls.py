@@ -15,7 +15,7 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('core.views',
     # Examples:
     # url(r'^$', 'argos.views.home', name='home'),
-    url(r'^/?$', 'home', name='home'),
+    #url(r'^/?$', 'home', name='home'),
 
     url(r'^contact/?$', 'contact', name='contact'),
     url(r'^account/', include('account.urls')),

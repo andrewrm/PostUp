@@ -17,8 +17,8 @@ import random
 
 def createAccount(request):
     print 'Creating Account'
-    response = mobile_create_account(request)
-    return response
+    mobile_create_account(request)
+    #return response
 
 
     
